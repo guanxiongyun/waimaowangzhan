@@ -1,0 +1,177 @@
+@import "init.scss";
+@font-face
+{
+font-family: "azhu";
+src: url('../../font/azhu.ttf');
+    //  url('Sansation_Bold.eot'); /* IE9+ */
+font-weight:bold;
+}
+
+
+
+body{
+    min-width: 1200px;
+    .center{
+        height: 120px;
+    }
+    .center-wrap{
+        .banner{
+            width: 100%;
+            height: 360px;
+            background-image: url("../../img/banner2.png");
+            background-repeat: no-repeat;
+            background-position: center center;
+            text-align: center;
+            padding-top: 136px;
+            box-sizing: border-box;
+            color: #ffffff;
+            font-family:"pingfang";
+            .name{
+                font-size: 54px;
+            }
+            span{
+                font-size:16px;
+                font-family:"pingfang";
+                font-weight:500;
+                color: #ffffff;
+            }
+            .current{
+                color: #FF8D47;
+            }
+        }
+        .img-wrap{
+            width: 100%;
+            min-height: 1359px;
+            // background-color: #ccc;
+            background-image: url("../../img/cases.jpg");
+            // background-image: url("../../img/cases.png");
+            background-repeat: no-repeat;
+            background-size: 100% auto;
+            background-position: right top;
+            padding-top: 130px;
+            .img-box{
+                max-width: 1200px;
+                min-width: 1200px;
+                margin: 0 auto;
+                // display: flex;
+                // display: -webkit-flex;
+                // justify-content: space-between;
+                // flex-direction: row;
+                // flex-wrap: wrap;
+                // align-items: center;
+                .img-item{
+                    display: block;
+                    float: left;
+                    margin: 0 10px;
+                    width: 380px;
+                    height: 550px;
+                    background:rgba(57,81,143,1);
+                    box-shadow:0px 4px 10px 0px rgba(0, 0, 0, 0.2);
+                    margin-bottom: 30px;
+                    img{
+                        display: block;
+                        width: 380px;
+                        height: 380px;
+                    }
+                    .text-wrap{
+                        padding: 30px;
+                        box-sizing: border-box;
+                        .text{
+                            line-height: 1.5;
+                            overflow: hidden;
+                            display: -webkit-box;
+                            -webkit-line-clamp: 4;
+                            -webkit-box-orient: vertical;
+                            font-size:14px;
+                            font-family:"pingfang";
+                            font-weight:bold;
+                            color:rgba(255,255,255,1);
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+}
+
+@media screen and (max-width:480px){ 
+    body{
+        min-width: 100%;
+        .center-wrap{
+            width: 100%;
+            .banner{
+                width: 100%;
+                height: 160px;
+                background-image: url("../../img/banner2.png");
+                background-repeat: no-repeat;
+                background-position: center center;
+                text-align: center;
+                padding-top: 36px;
+                box-sizing: border-box;
+                color: #ffffff;
+                font-family:"pingfang";
+                .name{
+                    font-size: 30px;
+                }
+                span{
+                    font-size:16px;
+                    font-family:"pingfang";
+                    font-weight:500;
+                    color: #ffffff;
+                }
+                .current{
+                    color: #FF8D47;
+                }
+            }
+            .img-wrap{
+                width: 100%;
+                // min-height: 1359px;
+                background-image: url("../../img/cases.jpg");
+                background-repeat: no-repeat;
+                background-size: 100% auto;
+                background-position: right top;
+                padding-top: 30px;
+                .img-box{
+                    max-width: 90%;
+                    min-width: 90%;
+                    margin: 0 auto;
+                    display: flex;
+                    display: -webkit-flex;
+                    justify-content: space-between;
+                    flex-direction: column;
+                    // flex-wrap: wrap;
+                    align-items: center;
+                    // text-align: center;
+                    .img-item{
+                        width: 310px;
+                        height: auto;
+                        background:rgba(57,81,143,1);
+                        box-shadow:0px 4px 10px 0px rgba(0, 0, 0, 0.2);
+                        margin-bottom: 20px;
+
+                        img{
+                            display: block;
+                            width: 100%;
+                            height: auto;
+                        }
+                        .text-wrap{
+                            padding: 10px;
+                            box-sizing: border-box;
+                            .text{
+                                font-size:14px;
+                                font-family:"pingfang";
+                                font-weight:bold;
+                                color:rgba(255,255,255,1);
+                            }
+                        }
+                    }
+                }
+            }
+    
+        }
+    
+    }
+}
+

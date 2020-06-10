@@ -1,0 +1,326 @@
+<!--
+ * @Date         : 2020-04-24 16:19:24
+ * @LastEditors  : 曾迪
+ * @LastEditTime : 2020-04-30 17:37:33
+ * @FilePath     : \03waimao\product_detail.html
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>产品详情三级</title>
+  <link rel="stylesheet" href="./css/css/product_detail.css">
+ 
+</head>
+
+<body>
+  <div id="wrap">
+    <nav class="com-nav">
+      <div class="nav-hide">
+        <img src="img/logo.png"/>
+      </div>
+<<<<<<< HEAD
+
+=======
+>>>>>>> 13dcccdae440ea240c7527ae9d9ee7c6496ca7fd
+      <div class="nav-box1">
+        <img src="img/logo.png"/>
+      </div>
+      <div class="nav-box2">
+        <ul class="nav-box2-ul">
+          <li>
+            <a   class="a-default" href="javascript:;" title="">HOME</a>
+          </li>
+          <li>  
+            <a href="javascript:;" title="">PRODUCT</a>
+          </li>
+          <li>
+            <a href="javascript:;" title="">ABOUTE</a>
+          </li>
+          <li>
+            <a href="javascript:;" title="">CASEC</a>
+          </li> <li>
+            <a href="javascript:;" title="">CONTACT</a>
+          </li>
+        </ul>
+      </div>
+      
+    </nav>
+    
+    <main>
+      <div class="height"></div>
+      <div class="head">
+        <div class="pics">
+          <img class="pic-main" :src="piclist[currentPicIndex]">
+          <!-- 预留6个图片位置 -->
+          <ul class="pic-cells">
+            <li class="pic-cell" :class="{active: index == currentPicIndex}" v-for="(item, index) in piclist" @click="changePic(index)"><img :src="item" alt=""></li>
+          </ul>
+        </div>
+        <div class="desc">
+          <div class="top">
+            <div class="title">{{title}}</div>
+            <div class="content">
+  
+              Product descriptionProduct descriptionProduct descriptionProduct description
+              Product descriptionProduct descriptionProduct descriptionvProduct descriptionvProduct description
+              Product descriptionProduct descriptionProduct description
+              Product descriptionProduct description
+              Product descriptionProduct descriptionProduct descriptionProduct descriptionvvProduct description
+              
+            
+            </div>
+          </div>
+          <div class="bottom">
+            <div class="line"></div>
+            <a class="btn" onclick="openInput()">Button</a>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- 产品详情点开单个 -->
+  <div class="product-details-pop" v-if="currentProductIndex!= -1">
+    <div class="title">
+      <span>{{productslist[currentProductIndex].title}}</span>
+      <div class="icon" @click="closeDetails()"></div>
+    </div>
+    <div class="pic">
+      
+      <img :src="productslist[currentProductIndex].img" alt="">
+    </div>
+    <div class="desc com-context">{{productslist[currentProductIndex].desc}}
+  </div>
+  </div>
+
+  
+      <div class="body">
+        <!-- 3.1.	所有产品
+  3.2.	产品参数
+  3.3.	结构图
+  3.4.	细节展示
+  3.5.	工厂实力
+  3.6.	包装运输
+  3.7.	FAQ
+   -->
+        <ul class="title">
+          <li v-for="(item, index) in navlist" :class="{active: index == currentNavIndex}"><a :href="item.href">{{item.name}}</a></li>
+        </ul>
+        <div class="main">
+
+          <!-- 所有产品 -->
+          <div class="products">
+            <div class="main-content">
+              <ul>
+                <li class="product" :title="item.title" v-for="(item, index) in productslist" @click="openDetails(index)">
+                  <div class="pic"><img :src="item.img" alt=""></div>
+                  <div class="content">
+                    <div class="title">{{item.title}}</div>
+                    <div class="desc">{{item.desc}}</div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            
+          </div>
+          <!-- 产品参数 -->
+          <div class="params" id="params">
+            <div class="main-title" @click="toggleNav(1)">
+              <span>{{navlist[1].name}}</span>
+              <div class="icon" :class="{active: navlist[1].ifshow}"></div>
+            </div>
+            <div class="main-content com-context" v-show="navlist[1].ifshow">
+              果然是郭德纲第三个
+            </div>
+
+          </div>
+          <!-- 结构图 -->
+          <div class="diagram" id="diagram">
+            <div class="main-title" @click="toggleNav(2)">
+              <span>{{navlist[2].name}}</span>
+              <div class="icon" :class="{active: navlist[2].ifshow}"></div>
+            </div>
+            <div class="main-content com-context" v-show="navlist[2].ifshow">
+              sfasfa
+            </div>
+          </div>
+          <!-- 细节展示 -->
+          <div class="details" id="details">
+            <div class="main-title" @click="toggleNav(3)">
+              <span>{{navlist[3].name}}</span>
+              <div class="icon" :class="{active: navlist[3].ifshow}"></div>
+            </div>
+            <div class="main-content com-context" v-show="navlist[3].ifshow">
+              asfasffer
+            </div>
+          </div>
+          <!-- 工厂实力 -->
+          <div class="factory" id="factory">
+            <div class="main-title" @click="toggleNav(4)">
+              <span>{{navlist[4].name}}</span>
+              <div class="icon" :class="{active: navlist[4].ifshow}"></div>
+            </div>
+            <div class="main-content com-context" v-show="navlist[4].ifshow">
+              ergtgrdf
+            </div>
+          </div>
+          <!-- 打包运输 -->
+          <div class="package" id="package">
+            <div class="main-title" @click="toggleNav(5)">
+              <span>{{navlist[5].name}}</span>
+              <div class="icon" :class="{active: navlist[5].ifshow}"></div>
+            </div>
+            <div class="main-content com-context" v-show="navlist[5].ifshow">
+              afsadf
+            </div>
+          </div>
+          <!-- FAQ关键问题 -->
+          <div class="FAQ" id="FAQ">
+            <div class="main-title" @click="toggleNav(6)">
+              <span>{{navlist[6].name}}</span>
+              <div class="icon" :class="{active: navlist[6].ifshow}"></div>
+            </div>
+            <div class="main-content com-context" v-show="navlist[6].ifshow">
+              法司法的是非得失
+              <!-- <ul>
+                <li>
+                  <div class="title">1. What products do you deal with?</div>
+                  <div class="content">We mainly deal with IP Solutions including IP Cameras, NVRs, POE Switches, also HDCVI, AHD and some Analog Products. We developed our professional PC-Based NVR software 100% in house, which is stable and unique in the market, it could manage multi-brands IP cameras.</div>
+                </li>
+              </ul> -->
+            </div>
+          </div>
+  
+        </div>
+      </div>
+    </main>
+    
+    <div class="com-inquiry">
+      <div class="title">Inquiry Now</div>
+      <div class="input-wrap">
+          <div class="input-flex">
+              <div class="input"><div class="name">*Name:</div><input type="text" placeholder="Your name"></div>
+              <div class="input"><div class="name">Company:</div><input type="text"></div>
+              <div class="input"><div class="name">*Email:</div><input type="text"></div>
+              <div class="input"></div>
+              <div class="input"><div class="name">Tell:</div><input type="text"></div>
+              <div class="input"><div class="name">Whatsapp:</div><input type="text"></div>
+          </div>
+          <div class="max-ipt input">
+              <input type="text" placeholder="*Tell us your special needs as detailed as possible">
+          </div>
+          <div class="send">
+              <input type="submit" value="send">
+          </div>
+      </div> 
+  </div>
+    <!-- 底部内容 -->
+  <footer class="footer">
+    <ul>
+     <li class="footer-li1">
+       <h4>
+       <span> Useful Links</span>  
+       </h4>
+       <p><span></span> Product Catalogue</p>
+       <p><span></span>News</p>
+       <p><span></span>Contact Us</p>
+
+     </li>
+     <li class="footer-li2">
+       <p>
+        Company address: Company Address Company Address 
+       </p> 
+       <p> Official website: XXXXXXXXXX</p>
+       <p> Tel: XXXXXXX</p>
+      
+     </li>
+    </ul>
+    <p class="p-icon">
+      <span>
+        Follow Us
+      </span>
+      <a href="" title=""> <img src="/img/twitter.png"></a>  
+      <a href="" title=""><img src="/img/facebook.png"> </a>
+      <a href="" title=""><img src="/img/google.png"> </a>
+      <a href="" title=""><img src="/img/inter.png"> </a>
+    </p>
+    <h5>Copyright © 2020 by **********| All rights reserved</h5>
+
+</footer>
+  </div>
+
+   <!-- 每个页面共用开始 -->
+  <!-- Inquiry Now -->
+  <div class="detainment hidden" id="pop1">
+    <div class="detainment-1">
+      <img class="bye1" src="/img/close.png" onclick="closeInput()">
+      <div class="title">Inquiry Now</div>
+      <div class="input-wrap">
+        <div class="input-flex">
+          <div class="input">
+            <div class="name">*Name:</div><input type="text" placeholder="Your name">
+          </div>
+          <div class="input">
+            <div class="name">Company:</div><input type="text">
+          </div>
+          <div class="input">
+            <div class="name">*Email:</div><input type="text">
+          </div>
+          <div class="input"></div>
+          <div class="input">
+            <div class="name">Tell:</div><input type="text">
+          </div>
+          <div class="input">
+            <div class="name">Whatsapp:</div><input type="text">
+          </div>
+        </div>
+        <div class="max-ipt input">
+          <input type="text" placeholder="*Tell us your special needs as detailed as possible">
+        </div>
+        <div class="send">
+          <input type="submit" value="send">
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <!-- 挽留框 -->
+  <div class="detainment hidden" id="pop2">
+    <div class="detainment-2">
+      <div class="title">Get “10 traps to buy a liquid nitrogen tank” for free
+        <img class="bye2" src="/img/close.png" onclick="closeStay()">
+      </div>
+      <div class="email">
+        <div class="input">*Email:<input type="text" placeholder="Your Email（Format must have@）"></div>
+        <div class="icon"></div>
+      </div>
+      <div class="send">
+        <input type="submit" value="SEND">
+      </div>
+    </div>
+  </div>
+
+
+  <!-- 邮箱板块 -->
+  <div class="email-us" onclick="openInput()">
+    <a href="javascript:;">
+      <img src="./img/email.png">
+      <span>Email Us</span>
+    </a>
+  </div>
+  <!-- 回到顶部 -->
+  <div class="scroll-top">
+
+  </div>
+  <!-- 每个页面共用结束 -->
+
+
+  <script src="https://cdn.bootcss.com/vue/2.6.11/vue.min.js"></script>
+  <script src="./js/dist/product_detail.js"></script>
+  <script src="./js/com.js"></script>
+  
+</body>
+
+</html>

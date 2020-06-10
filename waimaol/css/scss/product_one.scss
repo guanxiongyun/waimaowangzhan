@@ -1,0 +1,240 @@
+@import "init.scss";
+@font-face
+{
+font-family: "azhu";
+src: url('../../font/azhu.ttf');
+    //  url('Sansation_Bold.eot'); /* IE9+ */
+font-weight:bold;
+}
+
+
+
+body{
+    min-width: 1200px;
+    .center{
+        height: 120px;
+    }
+    // .nav-wrap{  //居中盒子
+    //     margin: auto;
+    //     width: 100%;
+    //     height: 120px;
+    // }
+    
+    // .nav-box2-ul{ //导航栏下导航条
+    //     overflow: hidden;
+    //     margin-left: 25%;
+    //     li{
+    //     float: left;
+    //     line-height: 120px;
+    //     margin-left: 53px;
+
+    //     a{
+    //         width:453px;
+    //         height:14px;
+    //         font-size:18px;
+    //         font-family:Source Han Sans CN;
+    //         font-weight:bold;
+    //         color:#333333;
+    //         position: relative;
+    //         cursor:pointer ;
+    //     }
+    //     .a-default:before {
+    //         content: '';
+    //         position: absolute;
+    //         width: 40%;
+    //         left:30%;
+    //         bottom: -5px;
+    //         border-top: 3px solid rgba(57,81,143,1);
+            
+    //     }
+        
+    //     .a-default{
+    //         width:55px;
+    //         height:15px;
+    //         font-size:18px;
+    //         font-family:Source Han Sans CN;
+    //         font-weight:bold;
+    //         color:rgba(57,81,143,1);
+    //     };
+    //     };
+
+    //     li:first-child{
+    //     margin-left: 0px;
+    //     }
+    // };
+    .center-wrap{
+        .banner{
+            width: 100%;
+            height: 360px;
+            background-image: url("../../img/banner2.png");
+            background-repeat: no-repeat;
+            background-position: center center;
+            text-align: center;
+            padding-top: 136px;
+            box-sizing: border-box;
+            color: #ffffff;
+            font-family:"pingfang";
+            .name{
+                font-size: 54px;
+            }
+            span{
+                font-size:16px;
+                font-family:"pingfang";
+                font-weight:500;
+                color: #ffffff;
+            }
+            .current{
+                color: #FF8D47;
+            }
+        }
+        .img-wrap{
+            max-width: 1200px;
+            min-width: 1200px;
+            margin: 60px auto;
+            display: flex;
+            display: -webkit-flex;
+            justify-content: space-between;
+            flex-direction: row;
+            flex-wrap: wrap;
+            .img-item{
+                width:380px;
+                height:425px;
+                margin-bottom: 30px;
+                background:rgba(255,255,255,1);
+                border:1px solid rgba(225, 225, 225, 1);
+                box-shadow:0px 4px 13px 0px rgba(0, 0, 0, 0.12);
+                padding: 10px;
+                box-sizing: border-box;
+                img{
+                    display: block;
+                    width: 360px;
+                    height: 360px;
+                    background-color: #ccc;
+                }
+                .link{
+                    height: 54px;
+                    line-height: 54px;
+                    padding: 0 10px;
+                    display: flex;
+                    display: -webkit-flex;
+                    justify-content: space-between;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    .name{
+                        width: 300px;
+                        overflow: hidden;
+                        text-overflow:ellipsis;
+                        white-space: nowrap;
+                    }
+                    a{
+                        width: 22px;
+                        height: 22px;
+                        border-radius: 50%;
+                        background-image: url("../../img/right.png");
+                        background-size: 100% 100%;
+                        background-repeat: no-repeat;
+                        background-position: center center;
+                    }
+                }
+            }
+        }
+
+    }
+
+}
+
+
+@media screen and (max-width:480px){ 
+    body{
+        min-width: 100%;
+        // .center{
+        //     height: 120px;
+        // }
+        .center-wrap{
+            width: 100%;
+            .banner{
+                width: 100%;
+                height: 160px;
+                background-image: url("../../img/banner2.png");
+                background-repeat: no-repeat;
+                background-position: center center;
+                text-align: center;
+                padding-top: 36px;
+                box-sizing: border-box;
+                color: #ffffff;
+                font-family:"pingfang";
+                .name{
+                    font-size: 30px;
+                }
+                span{
+                    font-size:16px;
+                    font-family:"pingfang";
+                    font-weight:500;
+                    color: #ffffff;
+                }
+                .current{
+                    color: #FF8D47;
+                }
+            }
+            .img-wrap{
+                max-width: 100%;
+                min-width: 100%;
+                margin: 60px auto;
+                // display: flex;
+                // display: -webkit-flex;
+                // justify-content: space-between;
+                // flex-direction: row;
+                // flex-wrap: wrap;
+                .img-item{
+                    margin: 0 auto;
+                    width:310px;
+                    height:320px;
+                    margin-bottom: 30px;
+                    background:rgba(255,255,255,1);
+                    border:1px solid rgba(225, 225, 225, 1);
+                    box-shadow:0px 4px 13px 0px rgba(0, 0, 0, 0.12);
+                    padding: 10px;
+                    box-sizing: border-box;
+                    img{
+                        display: block;
+                        width: 100%;
+                        height: 260px;
+                        background-color: #ccc;
+                    }
+                    .link{
+                        height: 40px;
+                        line-height: 40px;
+                        padding: 0 10px;
+                        display: flex;
+                        display: -webkit-flex;
+                        justify-content: space-between;
+                        flex-direction: row;
+                        flex-wrap: wrap;
+                        align-items: center;
+                        .name{
+                            width: 70%;
+                            overflow: hidden;
+                            text-overflow:ellipsis;
+                            white-space: nowrap;
+                        }
+                        a{
+                            width: 22px;
+                            height: 22px;
+                            border-radius: 50%;
+                            background-image: url("../../img/right.png");
+                            background-size: 100% 100%;
+                            background-repeat: no-repeat;
+                            background-position: center center;
+                        }
+                    }
+                }
+            }
+    
+        }
+    
+    }
+}
+
+
+

@@ -1,0 +1,144 @@
+@import "init.scss";
+@font-face
+{
+font-family: "azhu";
+src: url('../../font/azhu.ttf');
+    //  url('Sansation_Bold.eot'); /* IE9+ */
+font-weight:bold;
+}
+
+
+
+body{
+    min-width: 1200px;
+    .center{
+        height: 120px;
+    }
+    .center-wrap{
+        // .banner{
+        //     width: 100%;
+        //     height: 360px;
+        //     background-image: url(/img/banner2.png);
+        //     background-repeat: no-repeat;
+        //     background-position: center center;
+        //     text-align: center;
+        //     padding-top: 136px;
+        //     box-sizing: border-box;
+        //     color: #ffffff;
+        //     font-family:TenSans;
+        //     .name{
+        //         font-size: 54px;
+        //     }
+        //     span{
+        //         font-size:16px;
+        //         font-family:PingFang SC;
+        //         font-weight:500;
+        //         color: #ffffff;
+        //     }
+        //     .current{
+        //         color: #FF8D47;
+        //     }
+        // }
+        .box{
+            margin: 60px auto;
+            min-width: 1200px;
+            max-width: 1200px;
+            background:rgba(255,255,255,1);
+            border:1px solid rgba(227, 227, 227, 1);
+            .title{
+                padding: 20px;
+                height: 103px;
+                box-sizing: border-box;
+                border-bottom: 1px dashed rgba(227,227,227,1);;
+                .name{
+                    text-align: center;
+                    font-size:22px;
+                    font-family:"pingfang";
+                    font-weight:400;
+                    color:rgba(51,51,51,1);
+                }
+                .time{
+                    margin-top: 20px;
+                    text-align: left;
+                    font-size:12px;
+                    font-family:"pingfang";
+                    font-weight:400;
+                    color:rgba(102,102,102,1);
+                }
+            }
+            .text{
+                padding: 20px;
+                box-sizing: border-box;
+                font-size:14px;
+                font-family:"pingfang";
+                font-weight:400;
+                color:rgba(51,51,51,1);
+                line-height: 30px;
+                .img{
+                    display: block;
+                    width: 1160px;
+                    height: 623px;
+                    margin: 20px auto;
+                    background-color: #ccc;
+                }
+            }
+        }
+
+    }
+
+}
+
+@media screen and (max-width:480px){ 
+    body{
+        min-width: 100%;
+        .center-wrap{
+            padding-top: 60px;
+            .box{
+                // padding-top: 30px;
+                margin: 0px auto 60px auto;
+                min-width: 90%;
+                max-width: 90%;
+                background:rgba(255,255,255,1);
+                border:1px solid rgba(227, 227, 227, 1);
+                .title{
+                    padding: 20px;
+                    height: 103px;
+                    box-sizing: border-box;
+                    border-bottom: 1px dashed rgba(227,227,227,1);;
+                    .name{
+                        text-align: center;
+                        font-size:22px;
+                        font-family:"pingfang";
+                        font-weight:400;
+                        color:rgba(51,51,51,1);
+                    }
+                    .time{
+                        margin-top: 20px;
+                        text-align: left;
+                        font-size:12px;
+                        font-family:"pingfang";
+                        font-weight:400;
+                        color:rgba(102,102,102,1);
+                    }
+                }
+                .text{
+                    padding: 20px;
+                    box-sizing: border-box;
+                    font-size:14px;
+                    font-family:"pingfang";
+                    font-weight:400;
+                    color:rgba(51,51,51,1);
+                    line-height: 30px;
+                    .img{
+                        display: block;
+                        width: 100%;
+                        height: auto;
+                        margin: 20px auto;
+                        background-color: #ccc;
+                    }
+                }
+            }
+    
+        }
+    }
+}

@@ -1,0 +1,364 @@
+@import "init.scss";
+@font-face
+{
+font-family: "azhu";
+src: url('../../font/azhu.ttf');
+    //  url('Sansation_Bold.eot'); /* IE9+ */
+font-weight:bold;
+}
+
+
+
+body{
+    
+    min-width: 1200px;
+    .center{
+        height: 120px;
+    }
+    .center-wrap{
+        .banner{
+            width: 100%;
+            height: 360px;
+            background-image: url("../../img/banner2.png");
+            background-position: center center;
+            text-align: center;
+            padding-top: 136px;
+            box-sizing: border-box;
+            color: #ffffff;
+            font-family:"pingfang";
+            .name{
+                font-size: 54px;
+            }
+            span{
+                font-size:16px;
+                font-family:"pingfang";
+                font-weight:500;
+                color: #ffffff;
+            }
+            .current{
+                color: #FF8D47;
+            }
+        }
+        .center-bottom{
+            width: 100%;
+            height: 719px;
+            .main{
+                max-width: 1200px;
+                min-width: 1200px;
+                margin: 0 auto;
+                .title{
+                    width: 100%;
+                    font-size:36px;
+                    font-family:"pingfang";
+                    font-weight:800;
+                    color:rgba(51,51,51,1);
+                    line-height:60px;
+                    text-align: left;
+                    margin-bottom: 30px;
+                }
+                .box1{
+                    width:100%;
+                    box-sizing: border-box;
+                    height:296px;
+                    background:rgba(255,255,255,1);
+                    box-shadow:0px 2px 8px 0px rgba(0, 0, 0, 0.17);
+                    padding: 8px;
+                    .box1-content{
+                        width:1184px;
+                        height:280px;
+                        background:rgba(247,247,247,1);
+                        .left, .right{
+                            box-sizing: border-box;
+                            height: 200px;
+                            width: 50%;
+                            float: left;
+                            text-align: center;
+                            margin-top: 40px;
+                            .name{
+                                font-size:24px;
+                                font-family:"pingfang";
+                                font-weight:bold;
+                                color:rgba(57,81,143,1);
+                                margin-bottom: 5px;
+                            }
+                            .text{
+                                font-size:18px;
+                                line-height:30px;
+                                font-family:"pingfang";
+                                font-weight:500;
+                                color:rgba(51,51,51,1);
+                                margin-bottom: 20px;
+                            }
+                        }
+                        .left{
+                            border-right: 1px solid #dddddd;
+                            .phone, .address{
+                                width: 396px;
+                                margin: 0 auto;
+                                text-align: left;
+                            }
+                        }
+                        .right{
+                            .email, .working{
+                                width: 396px;
+                                margin: 0 auto;
+                                text-align: left;
+                            }
+                        }
+                    }
+                }
+                .box2{
+                    margin-top: 60px;
+                    width: 100%;
+                    height:188px;
+                    background:rgba(255,255,255,1);
+                    border:1px solid rgba(221, 221, 221, 1);
+                    .title{
+                        font-size:36px;
+                        font-family:"pingfang";
+                        font-weight:400;
+                        color:rgba(51,51,51,1);
+                        line-height:60px;
+                        text-align: center;
+                        margin-bottom: 30px;
+                    }
+                    .email{
+                        height: 60px;
+                        line-height: 60px;
+                        margin-left: 60px;
+                        display: inline-block;
+                        .input{
+                            float: left;
+                            display: flex;
+                        }
+                        input{
+                            width:418px;
+                            height:60px;
+                            margin: 0;
+                            border:2px solid rgba(204,204,204,1);
+                            padding-left: 10px;
+                            box-sizing: border-box;
+                            margin-left: 20px;
+                        }
+                        input:focus{
+                            outline:none;
+                            border:2px solid rgba(255,152,6,1);
+                        }
+                        .icon{
+                            float: left;
+                            margin-top: 0px;
+                            margin-left: 20px;
+                            width: 54px;
+                            height: 58px;
+                            background-image: url("../../img/pdf.png");
+                            background-repeat: no-repeat;
+                        }
+                    }
+                    .send{
+                        margin-right: 60px;
+                        width:210px;
+                        height:60px;
+                        display: block;
+                        float: right;
+                        input{
+                            width:210px;
+                            height:60px;
+                            background:rgba(57,81,143,1);
+                            font-size:18px;
+                            font-family:"pingfang";
+                            font-weight:bold;
+                            color:rgba(255,255,255,1);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+
+@media screen and (max-width:480px){ 
+    body{
+        min-width: 100%;
+        .center-wrap{
+            .banner{
+                width: 100%;
+                height: 160px;
+                background-image: url("../../img/banner2.png");
+                background-position: center center;
+                text-align: center;
+                padding-top: 36px;
+                box-sizing: border-box;
+                color: #ffffff;
+                font-family:"pingfang";
+                .name{
+                    font-size: 30px;
+                }
+                span{
+                    font-size:16px;
+                    font-family:"pingfang";
+                    font-weight:500;
+                    color: #ffffff;
+                }
+                .current{
+                    color: #FF8D47;
+                }
+            }
+            .center-bottom{
+                width: 100%;
+                // height: 719px;
+                .main{
+                    max-width: 90%;
+                    min-width: 90%;
+                    margin: 0 auto;
+                    .title{
+                        width: 100%;
+                        font-size:26px;
+                        font-family:"pingfang";
+                        font-weight:800;
+                        color:rgba(51,51,51,1);
+                        line-height:30px;
+                        text-align: left;
+                        margin-bottom: 10px;
+                    }
+                    .box1{
+                        width:100%;
+                        box-sizing: border-box;
+                        height: auto;
+                        background:rgba(255,255,255,1);
+                        box-shadow:0px 2px 8px 0px rgba(0, 0, 0, 0.17);
+                        padding: 8px;
+                        .box1-content{
+                            width:100%;
+                            height: 100%;
+                            background:rgba(247,247,247,1);
+                            display: flex;
+                            // display: -webkit-flex;
+                            flex-direction: column;
+                            align-items: center;
+                            padding: 10px;
+                            box-sizing: border-box;
+                            .left, .right{
+                                box-sizing: border-box;
+                                // height: 200px;
+                                width: 100%;
+                                // float: left;
+                                text-align: center;
+                                // margin-top: 40px;
+                                margin: 0;
+                                text-align: center;
+                                .name{
+                                    font-size:20px;
+                                    font-family:"pingfang";
+                                    font-weight:bold;
+                                    color:rgba(57,81,143,1);
+                                    margin-bottom: 5px;
+                                }
+                                .text{
+                                    font-size:16px;
+                                    line-height:1.5;
+                                    font-family:"pingfang";
+                                    font-weight:500;
+                                    color:rgba(51,51,51,1);
+                                    margin-bottom: 20px;
+                                }
+                            }
+                            .left{
+                                // border-right: 1px solid #dddddd;
+                                border: none;
+                                height: auto;
+                                // margin-bottom: 20px;
+                                .phone, .address{
+                                    width: 100%;
+                                    margin: 0 auto;
+                                    text-align: left;
+                                }
+                            }
+                            .right{
+                                height: auto;
+                                .email, .working{
+                                    width: 100%;
+                                    margin: 0 auto;
+                                    text-align: left;
+                                }
+                            }
+                        }
+                    }
+                    .box2{
+                        margin-top: 60px;
+                        margin-bottom: 30px;
+                        width: 100%;
+                        height:188px;
+                        background:rgba(255,255,255,1);
+                        border:1px solid rgba(221, 221, 221, 1);
+                        text-align: center;
+                        .title{
+                            margin: 10px auto;
+                            font-size:16px;
+                            font-family:"pingfang";
+                            font-weight:400;
+                            color:rgba(51,51,51,1);
+                            line-height:16px;
+                            text-align: center;
+                            margin-bottom: 30px;
+                        }
+                        .email{
+                            height: 30px;
+                            line-height: 30px;
+                            margin-left: 0;
+                            display: flex;
+                            justify-content: center;
+                            box-sizing: border-box;
+                            .input{
+                                width: 86%;
+                                display: flex;
+                            }
+                            input{
+                                height:30px;
+                                margin: 0;
+                                border:2px solid rgba(204,204,204,1);
+                                padding-left: 5px;
+                                box-sizing: border-box;
+                                margin-left: 5px;
+                                flex: 1;
+                            }
+                            input:focus{
+                                outline:none;
+                                border:2px solid rgba(255,152,6,1);
+                            }
+                            .icon{
+                                float: left;
+                                margin-top: 0px;
+                                // margin-left: 20px;
+                                margin-left: 0;
+                                width: 30px;
+                                height: 30px;
+                                background-image: url("../../img/pdf.png");
+                                background-repeat: no-repeat;
+                                background-size: 100% 100%;
+                                background-position: center center;
+                            }
+                        }
+                        .send{
+                            // float: left;
+                            margin: 20px auto;
+                            width:100%;
+                            height:30px;
+                            input{
+                                width:100px;
+                                height:30px;
+                                background:rgba(57,81,143,1);
+                                font-size:12px;
+                                line-height: 30px;
+                                font-family:"pingfang";
+                                font-weight:bold;
+                                color:rgba(255,255,255,1);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
